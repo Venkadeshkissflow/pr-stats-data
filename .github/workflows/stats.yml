@@ -1,13 +1,19 @@
-name: learn-github-actions
-run-name: ${{ github.actor }} is learning GitHub Actions
-on: [push]
+name: Pull Request Stats
+
+on:
+  pull_request:
+    types: [opened]
+
 jobs:
-  check-bats-version:
+  stats:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
+      - name: Run pull request stats
+        uses: flowwer-dev/pull-request-stats@master
         with:
-          node-version: "14"
-      - run: npm install -g bats
-      - run: bats -v
+          token: ${{ secrets.ADD_A_PERSONAL_ACCESS_TOKEN }}
+          organization: "piedpiper"
+          period: 7
+          charts: true
+          disableLinks: true
+          sortBy: "COMMENTS"
