@@ -11,10 +11,9 @@ jobs:
       - name: Run pull request stats
         uses: flowwer-dev/pull-request-stats@master
         with:
-          token: ${{ secrets.ADD_A_PERSONAL_ACCESS_TOKEN }}
+          token: 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
           organization: "piedpiper"
           period: 7
           charts: true
           disableLinks: true
           sortBy: "COMMENTS"
-
