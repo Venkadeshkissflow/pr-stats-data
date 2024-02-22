@@ -1,12 +1,13 @@
-name: Pull Request Stats run
-
-on:
-  pull_request:
-    types: [opened]
-
+name: learn-github-actions
+run-name: ${{ github.actor }} is learning GitHub Actions
+on: [push]
 jobs:
-  stats:
+  check-bats-version:
     runs-on: ubuntu-latest
     steps:
-      - name: Run pull request stats
-        uses: flowwer-dev/pull-request-stats@master
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "14"
+      - run: npm install -g bats
+      - run: bats -v
