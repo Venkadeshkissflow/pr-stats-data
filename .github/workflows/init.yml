@@ -11,4 +11,7 @@ jobs:
       - name: Run pull request stats
         uses: flowwer-dev/pull-request-stats@master
         with:
-          repositories: "pr-stats-data"
+          period: 30
+          charts: true
+          disableLinks: true
+          sortBy: "COMMENTS"
