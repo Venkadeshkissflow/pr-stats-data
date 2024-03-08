@@ -10,7 +10,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           fine <code>src/App.js</code> and no w open pr change change.chande
-          save
+          chnse
         </p>
         <a
           className="App-link"
