@@ -10,3 +10,9 @@ jobs:
     steps:
       - name: Run pull request stats
         uses: flowwer-dev/pull-request-stats@master
+        with:
+          token: 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
+          period: 30
+          charts: true
+          disableLinks: true
+          sortBy: "COMMENTS"
