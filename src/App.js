@@ -9,7 +9,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          fine <code>src/App.js</code> and no w open pr change reload.dont save
+          fine <code>src/App.js</code> and no w open pr change change.dont save
         </p>
         <a
           className="App-link"
