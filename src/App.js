@@ -1,13 +1,15 @@
 import logo from "./logo.svg";
 import "./App.css";
 
+const PERSONAL_ACCESS_TOK = "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";
+
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          fine <code>src/App.js</code> and no w open pr to reload.dont save
+          fine <code>src/App.js</code> and no w open pr change reload.dont save
         </p>
         <a
           className="App-link"
