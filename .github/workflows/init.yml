@@ -1,8 +1,8 @@
 name: Pull Request Stats
 
 on:
-  pull_request:
-    types: [opened]
+  schedule:
+    - cron:  '*/5 * * * *'
 
 jobs:
   stats:
@@ -10,3 +10,7 @@ jobs:
     steps:
       - name: Run pull request stats
         uses: flowwer-dev/pull-request-stats@master
+        with:
+          repositories: 'piedpiper/repo1,piedpiper/repo2'
+          webhook: 'https://hooks.zapier.com/hooks/catch/123456/XXXXXXXX'
+          # webhook: ${{ secrets.WEBHOOK_URL }} You may want to store this value as a secret.
