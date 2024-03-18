@@ -1,8 +1,8 @@
 name: Pull Request Stats
 
 on:
-  pull_request:
-    types: [opened]
+  schedule:
+    - cron: "0 16 * * 5"
 
 jobs:
   stats:
@@ -11,7 +11,6 @@ jobs:
       - name: Run pull request stats
         uses: flowwer-dev/pull-request-stats@master
         with:
-          period: 30
-          charts: true
-          disableLinks: true
-          sortBy: "COMMENTS"
+          repositories: "piedpiper/repo1,piedpiper/repo2"
+          webhook: "https://hooks.zapier.com/hooks/catch/18093362/3c5j1s3/"
+          # webhook: ${{ secrets.WEBHOOK_URL }} You may want to store this value as a secret.
