@@ -9,7 +9,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          fine <code>src/App.js</code> and no w open pr change change.chande
+          fine <code>src/App.js</code> and no w open change change change.chande
           chnse
         </p>
         <a
