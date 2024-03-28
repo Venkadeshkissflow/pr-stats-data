@@ -9,8 +9,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          fine <code>src/App.js</code> change no w open change change
-          change.chande chnse
+          kissflow <code>src/App.js</code> demo
         </p>
         <a
           className="App-link"
