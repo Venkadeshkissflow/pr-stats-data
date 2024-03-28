@@ -1,15 +1,10 @@
 name: Pull Request Stats
 
-on:
-  pull_request:
-    types: [opened, created]
+on: [push]
 
 jobs:
-  stats:
+  echo-message:
     runs-on: ubuntu-latest
     steps:
-      - name: Run pull request stats
-        uses: flowwer-dev/pull-request-stats@master
-        with:
-          repositories: "Venkadeshkissflow/pr-stats-data"
-          webhook: "https://play.kissflow.com/integration/2/Ac4Zg6muao_p/webhook/oHVcsZlZ9psSA3BcnmG-9WkFXFOCVGrDQ43eMVDd5tnW1oy5zjip8Wz91xI7DJPhcBZW8yCjxj3R89yKl2U3KA"
+      - name: Echo a message
+        run: echo "Hello, world!"
