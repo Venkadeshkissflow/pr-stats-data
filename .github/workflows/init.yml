@@ -11,7 +11,5 @@ jobs:
     steps:
       - name: Run pull request stats
         uses: flowwer-dev/pull-request-stats@master
-        with:
-          repositories: "piedpiper/repo1,piedpiper/repo2"
-          webhook: "https://hooks.zapier.com/hooks/catch/123456/XXXXXXXX"
-          # webhook: ${{ secrets.GITHUB_TOKEN }} You may want to store this value as a secret.
+      - name: Use GitHub token
+        run: echo "Token is ${{ secrets.GITHUB_TOKEN }}"
