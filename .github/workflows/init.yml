@@ -1,8 +1,6 @@
 name: Pull Request Stats
 
-on:
-  issue_comment:
-    types: [created]
+on: [push]
 
 jobs:
   stats:
