@@ -11,5 +11,3 @@ jobs:
     steps:
       - name: Run pull request stats
         uses: flowwer-dev/pull-request-stats@master
-      - name: Use GitHub token
-        run: echo "Token is ${{ secrets.GITHUB_TOKEN }}"
