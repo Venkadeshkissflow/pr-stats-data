@@ -10,4 +10,4 @@ jobs:
         uses: flowwer-dev/pull-request-stats@master
         with:
           repositories: "Venkadeshkissflow/pr-stats-data"
-          webhook: "https://play.kissflow.com/integration/2/Ac4Zg6muao_p/webhook/oHVcsZlZ9psSA3BcnmG-9WkFXFOCVGrDQ43eMVDd5tnW1oy5zjip8Wz91xI7DJPhcBZW8yCjxj3R89yKl2U3KA"
+          webhook: "https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTZiMDYzMzA0M2Q1MjZhNTUzYzUxM2Ei_pc"
