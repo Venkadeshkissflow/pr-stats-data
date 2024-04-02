@@ -9,7 +9,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          kissflow change9 <code>src/App.js</code> demo
+          kissflow change10 <code>src/App.js</code> demo
         </p>
         <a
           className="App-link"
