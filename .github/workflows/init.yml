@@ -1,16 +1,2 @@
-name: Pull Request Stats
-
-on:
-  schedule:
-    - cron: "*/1 * * * *"
-
-jobs:
-  stats:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Run pull request stats
-        uses: flowwer-dev/pull-request-stats@master
-        with:
-          repositories: "Venkadeshkissflow/pr-stats-data"
-          webhook: "https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTZiMDYzMzA0M2Q1MjZhNTUzYzUxM2Ei_pc"
-          # webhook: ${{ secrets.WEBHOOK_URL }} You may want to store this value as a secret.
+- name: Run pull request stats
+  uses: flowwer-dev/pull-request-stats@master
