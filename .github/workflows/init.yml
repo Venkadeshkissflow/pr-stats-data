@@ -11,3 +11,8 @@ jobs:
     steps:
       - name: Run pull request stats
         uses: flowwer-dev/pull-request-stats@master
+        with:
+          period: 100
+          charts: true
+          disableLinks: true
+          sortBy: "COMMENTS"
