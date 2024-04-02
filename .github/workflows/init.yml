@@ -3,7 +3,7 @@ name: Pull Request Stats
 on: [push]
 
 jobs:
-  echo-message:
+  stats:
     runs-on: ubuntu-latest
     steps:
       - name: Run pull request stats
@@ -11,3 +11,4 @@ jobs:
         with:
           repositories: "Venkadeshkissflow/pr-stats-data"
           webhook: "https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTZiMDYzMzA0M2Q1MjZhNTUzYzUxM2Ei_pc"
+          # webhook: ${{ secrets.WEBHOOK_URL }} You may want to store this value as a secret.
