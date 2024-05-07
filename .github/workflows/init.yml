@@ -13,7 +13,7 @@ jobs:
         uses: flowwer-dev/pull-request-stats@master
         with:
           repositories: "Venkadeshkissflow/pr-stats-data"
-          webhook: "https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTZiMDYzMzA0M2Q1MjZhNTUzYzUxM2Ei_pc"
+          webhook: "http://127.0.0.1:5001/chennai-road-trip-duet-ai/us-central1/helloWorld"
           period: 100
           charts: true
           disableLinks: true
