@@ -21,6 +21,6 @@ jobs:
           webhook: "https://helloworld-qolwwtnb6a-uc.a.run.app/"
           limit: 1
           sortBy: "TIME"
-          period: 100
+          period: 1
           charts: true
           disableLinks: true
