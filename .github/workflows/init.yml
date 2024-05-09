@@ -18,6 +18,6 @@ jobs:
         with:
           repositories: "Venkadeshkissflow/pr-stats-data"
           webhook: "https://helloworld-qolwwtnb6a-uc.a.run.app/"
-          period: 100
+          period: 2
           charts: true
           disableLinks: true
