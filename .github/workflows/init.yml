@@ -1,27 +1,26 @@
 name: Pull Request Stats
 
 on:
-  pull_request_review:
-    types: [submitted]
-  # pull_request:
-  #   types: [opened, reopened, synchronize, closed]
-  #   branches: [git-actions-v1]
-  # schedule:
-  #   - cron: "0 16 * * 5"
+  pull_request:
+    branches:
+      - main
+    types: [closed]
 
 jobs:
-  stats:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pull-requests: write
-    steps:
-      - name: Run pull request stats
-        uses: flowwer-dev/pull-request-stats@master
-        with:
-          repositories: "Venkadeshkissflow/pr-stats-data"
-          webhook: "https://helloworld-qolwwtnb6a-uc.a.run.app/"
-          period: 100
-          charts: true
-          disableLinks: true
-          sortBy: "COMMENTS"
+  if_merged:
+    if: github.event.pull_request.merged == true
+    stats:
+      runs-on: ubuntu-latest
+      permissions:
+        contents: read
+        pull-requests: write
+      steps:
+        - name: Run pull request stats
+          uses: flowwer-dev/pull-request-stats@master
+          with:
+            repositories: "Venkadeshkissflow/pr-stats-data"
+            webhook: "https://helloworld-qolwwtnb6a-uc.a.run.app/"
+            period: 100
+            charts: true
+            disableLinks: true
+            sortBy: "COMMENTS"
