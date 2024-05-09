@@ -1,6 +1,13 @@
 name: Pull Request Stats
 
-on: [push]
+on:
+  pull_request_review:
+    types: [submitted]
+  # pull_request:
+  #   types: [opened, reopened, synchronize, closed]
+  #   branches: [git-actions-v1]
+  # schedule:
+  #   - cron: "0 16 * * 5"
 
 jobs:
   stats:
