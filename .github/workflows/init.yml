@@ -1,11 +1,14 @@
 name: Pull Request Stats
 
 on:
-  schedule:
-    - cron: "*/5 * * * *"
+  pull_request:
+    branches:
+      - main
+    types: [closed]
 
 jobs:
-  stats:
+  if_merged:
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     permissions:
       contents: read
