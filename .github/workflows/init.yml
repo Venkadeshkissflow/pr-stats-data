@@ -2,8 +2,8 @@ name: Pull Request Stats
 
 on:
   schedule:
-    # every 5 mins
-    - cron: "*/5 * * * *"
+    # every 2 mins
+    - cron: "*/2 * * * *"
   # pull_request:
   #   branches:
   #   types: [closed]
