@@ -1,9 +1,12 @@
 name: Pull Request Stats
 
 on:
-  pull_request:
-    branches:
-    types: [closed]
+  schedule:
+    # every 5 mins
+    - cron: "*/5 * * * *"
+  # pull_request:
+  #   branches:
+  #   types: [closed]
 
 jobs:
   if_merged:
