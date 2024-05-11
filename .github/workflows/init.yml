@@ -9,19 +9,20 @@ on:
   #   types: [closed]
 
 jobs:
-  runs-on: ubuntu-latest
-  permissions:
-    contents: read
-    pull-requests: write
-  steps:
-    - name: Run pull request stats
-      uses: flowwer-dev/pull-request-stats@master
-      with:
-        repositories: "Venkadeshkissflow/pr-stats-data"
-        webhook: "https://helloworld-qolwwtnb6a-uc.a.run.app/"
-        period: 2
-        charts: true
-        disableLinks: true
+  stats:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - name: Run pull request stats
+        uses: flowwer-dev/pull-request-stats@master
+        with:
+          repositories: "Venkadeshkissflow/pr-stats-data"
+          webhook: "https://helloworld-qolwwtnb6a-uc.a.run.app/"
+          period: 2
+          charts: true
+          disableLinks: true
 # jobs:
 #   if_merged:
 #     if: github.event.pull_request.merged == true
