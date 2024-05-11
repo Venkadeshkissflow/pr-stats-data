@@ -2,7 +2,7 @@ name: Pull Request Stats
 
 on:
   schedule:
-    # every 9min
+    # every 5min
     - cron: "*/5 * * * *"
   # pull_request:
   #   branches:
