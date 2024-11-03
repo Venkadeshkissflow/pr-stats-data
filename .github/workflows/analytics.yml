@@ -1,4 +1,4 @@
-name: "PR Analytics"
+name: "New Ana"
 on:
   workflow_dispatch:
     inputs:
