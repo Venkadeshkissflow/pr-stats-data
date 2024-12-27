@@ -33,5 +33,5 @@ jobs:
       - name: Upload Analytics Data
         uses: actions/upload-artifact@v3
         with:
-          name: pr-analytics-datas
-          path: pr-analytics1.json
+          name: pr-analytics-data
+          path: pr-analytics.json
