@@ -28,3 +28,16 @@ jobs:
           webhook: "https://play.kissflow.com/integration/2/Ac4Zg6muao_p/webhook/Abp2b6DDIDj-NivvwZ3kOyDtdbVt0Anl6OTJd-WHUvomofvdyea-t5LVxMelpUjXeTbTnhdRaO73wU7DBQRcA"
           env:
             GITHUB_API_URL: https://https://github.com/Venkadeshkissflow/api/v3
+
+      - name: Access Analytics Data   
+        run: echo "Analytics Data: ${{ steps.pr-analytics.outputs.analytics }}"
+
+      - name: Export Analytics
+        run: echo "${{ steps.pr-analytics.outputs.analytics }}" > analytics.json
+
+      - name: Save Analytics Data
+        uses: actions/upload-artifact@v3
+        with:
+          name: pull-request-analytics
+          path: analytics.json
+
