@@ -27,9 +27,4 @@ jobs:
           EXECUTION_OUTCOME: "collection"
           webhook: "https://play.kissflow.com/integration/2/Ac4Zg6muao_p/webhook/Abp2b6DDIDj-NivvwZ3kOyDtdbVt0Anl6OTJd-WHUvomofvdyea-t5LVxMelpUjXeTbTnhdRaO73wU7DBQRcA"
           env:
-            PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
-          run: |    
-            echo "GitHub API URL: $GITHUB_API_URL"
-            curl -H "Authorization: token $PAT_TOKEN" \
-                  -H "Accept: application/vnd.github.v3+json" \
-                  "$GITHUB_API_URL/user/repos"
+            GITHUB_API_URL: https://https://github.com/Venkadeshkissflow/api/v3
