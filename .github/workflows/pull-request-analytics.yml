@@ -1,4 +1,3 @@
-
 name: "PR Analytics"
 on:
   workflow_dispatch:
@@ -9,29 +8,20 @@ on:
         description: "Report date end(d/MM/yyyy)"
 
 jobs:
-  analytics:
+  create-report:
+    name: "Create report"
     runs-on: ubuntu-latest
     steps:
-      - name: Run Pull Request Analytics Action
-        id: pr-analytics
+      - name: "Run script for analytics"
         uses: AlexSim93/pull-request-analytics-action@v4
         with:
-          GITHUB_REPO_FOR_ISSUE: "stats-poc" # Make sure to specify the name of the repository where the issue will be created
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }} # In the case of a personal access token, it needs to be added to the repository's secrets and used in this field.
+          GITHUB_REPO_FOR_ISSUE: "pr-stats-data" # Make sure to specify the name of the repository where the issue will be created
           GITHUB_OWNER_FOR_ISSUE: "Venkadeshkissflow" # Make sure to specify the owner of the repository where the issue will be created
-          GITHUB_OWNERS_REPOS: "Venkadeshkissflow/stats-poc" # Be sure to list the owner and repository name in the format owner/repo
-          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
-          CORE_HOURS_START: "17:00"
-          CORE_HOURS_END: "17:30"
+          GITHUB_OWNERS_REPOS: "Venkadeshkissflow/pr-stats-data" # Be sure to list the owner and repository name in the format owner/repo
+          CORE_HOURS_START: "9:00"
+          CORE_HOURS_END: "19:00"
           TIMEZONE: "Europe/Berlin"
-          REPORT_DATE_START: "12/12/2024"
-          REPORT_DATE_END: "27/12/2024"
+          REPORT_DATE_START: "20/10/2023"
+          REPORT_DATE_END: "20/10/2024"
           EXECUTION_OUTCOME: "collection"
-
-      - name: Save Analytics Data to File
-        run: |
-          echo "${{ steps.pr-analytics }}" > pr-analytics.json
-      - name: Upload Analytics Data
-        uses: actions/upload-artifact@v3
-        with:
-          name: pr-analytics-data
-          path: pr-analytics.json
