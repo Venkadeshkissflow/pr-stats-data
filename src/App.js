@@ -4,6 +4,7 @@ import "./App.css";
 const PERSONAL_ACCESS_TOK = "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";
 
 function App() {
+  console.log("test");
   return (
     <div className="App">
       <header className="App-header">
