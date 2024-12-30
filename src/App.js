@@ -20,6 +20,9 @@ function App() {
           Learn React edit
         </a>
       </header>
+      <button onClick={()=>{console.log('clickme called')}}>
+        Click me
+      </button>
     </div>
   );
 }
